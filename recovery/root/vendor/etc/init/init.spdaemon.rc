@@ -1,0 +1,28 @@
+#####################################################################
+# Copyright (c) 2019-2022 Qualcomm Technologies, Inc.
+# Copyright (c) 2023 by EneTec
+# All Rights Reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#####################################################################
+
+on post-fs 
+    start vendor.spdaemon
+    start vendor.sec_nvm
+
+	
+service vendor.spdaemon /system/bin/spdaemon
+    class core
+    user system
+    group system
+	setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    shutdown critical
+    seclabel u:r:recovery:s0
+
+service vendor.sec_nvm /system/bin/sec_nvm
+    class core
+    user system
+    group system
+	setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib:/system/lib64:/system/lib:/sbin
+    disabled
+    seclabel u:r:recovery:s0
