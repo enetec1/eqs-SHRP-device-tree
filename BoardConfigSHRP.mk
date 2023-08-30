@@ -14,11 +14,11 @@ TW_DEVICE_VERSION := qc2_ND
 
 # Device codename
 # Default (if not set): N/A
-SHRP_DEVICE_CODE := SHRP_eqs_v.0.8.1
+SHRP_DEVICE_CODE := SHRP_eqs_v.0.8.2
 
 # Recovery Type (for "About" section only)
 # Default (if not set): N/A
-SHRP_REC_TYPE := Beta_v.0.8.1_ND_build_308232
+SHRP_REC_TYPE := Beta_v.0.8.2_ND_build_308292
 
 # Path of your SHRP device tree
 # Replace <device-brand> with the device brand name
@@ -172,17 +172,49 @@ SHRP_EXTERNAL_ADDON_2_SUCCESSFUL_TEXT := Done!
 SHRP_INC_IN_REC_EXTERNAL_ADDON_2 := true
 
 # Addon #3 - Name
-SHRP_EXTERNAL_ADDON_3_NAME := Flash_Test
+SHRP_EXTERNAL_ADDON_3_NAME := Install_Data_Backup_Magisk_Module
 # Addon #3 - Description
-SHRP_EXTERNAL_ADDON_3_INFO := "Do-nothing zip for testing purpose..."
+SHRP_EXTERNAL_ADDON_3_INFO := "data_backup v.2.14 Magisk Module installer to backup all your data/media by terminal command to USB key (on booted system and even if in encrypted status!)"
 # Addon #3 - Addon file name as ZIP (zip format is required)
-SHRP_EXTERNAL_ADDON_3_FILENAME := HelloWorld-signed.zip
+SHRP_EXTERNAL_ADDON_3_FILENAME := data_backup_v2.14-MAGISK.zip
 # Addon #3 - Free defineable button text the user need to press to actually install that addon
 # (Examples: Ok, Install, Flask, Enable, Disable, etc)
-SHRP_EXTERNAL_ADDON_3_BTN_TEXT := Execute
+SHRP_EXTERNAL_ADDON_3_BTN_TEXT := Install
 # Addon #3 - Text beeing shown when the installation was successful
 SHRP_EXTERNAL_ADDON_3_SUCCESSFUL_TEXT := Done!
 # Addon #3 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
 # Default (if not set) is NOT adding this addon into the recovery ramdisk. That means:
 # If you do NOT set this the addon will be saved into the internal storage (i.e: $(SHRP_INTERNAL)/SHRP/addons)
 SHRP_INC_IN_REC_EXTERNAL_ADDON_3 := true
+
+# Addon #4 - Name
+SHRP_EXTERNAL_ADDON_4_NAME := Data/Media_Restore_from_USB_key
+# Addon #4 - Description
+SHRP_EXTERNAL_ADDON_4_INFO := "data_restore v.2.14 started in interactive mode to recover your data/media backup contained in USB key (NOTES: please mount USB-OTG before using this! Forced encryption disabled and/or a /data partition format could be needed too!)"
+# Addon #4 - Addon file name as ZIP (zip format is required)
+SHRP_EXTERNAL_ADDON_4_FILENAME := data_restore_v2.14-MAGISK-TWRP-a.zip
+# Addon #4 - Free defineable button text the user need to press to actually install that addon
+# (Examples: Ok, Install, Flask, Enable, Disable, etc)
+SHRP_EXTERNAL_ADDON_4_BTN_TEXT := Restore
+# Addon #4 - Text beeing shown when the installation was successful
+SHRP_EXTERNAL_ADDON_4_SUCCESSFUL_TEXT := Done!
+# Addon #4 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
+# Default (if not set) is NOT adding this addon into the recovery ramdisk. That means:
+# If you do NOT set this the addon will be saved into the internal storage (i.e: $(SHRP_INTERNAL)/SHRP/addons)
+SHRP_INC_IN_REC_EXTERNAL_ADDON_4 := true
+
+# Addon #5 - Name
+SHRP_EXTERNAL_ADDON_5_NAME := Flash_Test
+# Addon #5 - Description
+SHRP_EXTERNAL_ADDON_5_INFO := "Do-nothing zip for testing purpose..."
+# Addon #5 - Addon file name as ZIP (zip format is required)
+SHRP_EXTERNAL_ADDON_5_FILENAME := HelloWorld-signed.zip
+# Addon #5 - Free defineable button text the user need to press to actually install that addon
+# (Examples: Ok, Install, Flask, Enable, Disable, etc)
+SHRP_EXTERNAL_ADDON_5_BTN_TEXT := Execute
+# Addon #5 - Text beeing shown when the installation was successful
+SHRP_EXTERNAL_ADDON_5_SUCCESSFUL_TEXT := Done!
+# Addon #5 - Inject the addon into the recovery (if so: be sure that it will fit into the partition)
+# Default (if not set) is NOT adding this addon into the recovery ramdisk. That means:
+# If you do NOT set this the addon will be saved into the internal storage (i.e: $(SHRP_INTERNAL)/SHRP/addons)
+SHRP_INC_IN_REC_EXTERNAL_ADDON_5 := true
