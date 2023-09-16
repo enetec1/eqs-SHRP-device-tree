@@ -14,11 +14,11 @@ TW_DEVICE_VERSION := qc2_ND
 
 # Device codename
 # Default (if not set): N/A
-SHRP_DEVICE_CODE := SHRP_eqs_v.0.8.2
+SHRP_DEVICE_CODE := v.0.9.0
 
 # Recovery Type (for "About" section only)
 # Default (if not set): N/A
-SHRP_REC_TYPE := Beta_v.0.8.2_ND_build_308292
+SHRP_REC_TYPE := Beta__v.0.9.0_ND__build_309154
 
 # Path of your SHRP device tree
 # Replace <device-brand> with the device brand name
